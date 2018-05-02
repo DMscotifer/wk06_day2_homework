@@ -28,6 +28,13 @@ public class LibraryTest {
     }
 
     @Test
+    public void removeBookFromLibrary() {
+        library.addBook(book);
+        library.removeBook(book);
+        assertEquals(0, library.bookCount());
+    }
+
+    @Test
     public void checkCapacityBeforeAddingBooks() {
         library.addBookToCapacity(book);
         library.addBookToCapacity(book2);
